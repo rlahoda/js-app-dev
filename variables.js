@@ -32,3 +32,21 @@ console.log(myLet);
 const myStr = 'I am a string';
 
 console.log(myStr);
+
+const strNumber = '48';
+
+console.log(strNumber);
+
+const number = 48;
+
+console.log(number);
+console.log(typeof strNumber);
+console.log(typeof number);
+
+const integer = 8;
+const float = 3.14;
+console.log(integer);
+console.log(typeof integer);
+
+console.log(float);
+console.log(typeof float);
