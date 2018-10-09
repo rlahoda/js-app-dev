@@ -20,7 +20,7 @@
 
 
 
-const weapons = ['rock', 'paper', 'scissors'];
+const weapons = ['💎', '📜', '✂️'];
 
 const game = {
   players: [{
@@ -130,9 +130,9 @@ function determineWinner(player1, player2) {
   if (player1.lastPlayed === player2.lastPlayed) {
     console.log("👎  It was a tie, nobody wins!");
   } else if (
-    player1.lastPlayed === 'rock' && player2.lastPlayed === 'scissors' ||
-    player1.lastPlayed === 'scissors' && player2.lastPlayed === 'paper' ||
-    player1.lastPlayed === 'paper' && player2.lastPlayed === 'rock'
+    player1.lastPlayed === '💎' && player2.lastPlayed === '✂️' ||
+    player1.lastPlayed === '✂️' && player2.lastPlayed === '📜' ||
+    player1.lastPlayed === '📜' && player2.lastPlayed === '💎'
   ) {
     return player1;
   } else {
