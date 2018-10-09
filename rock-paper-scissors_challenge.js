@@ -24,12 +24,12 @@ const weapons = ['💎', '📜', '✂️'];
 
 const game = {
   players: [{
-      name: "Harold",
+      name: "👨",
       score: 0,
       lastPlayed: ""
     },
     {
-      name: "Sydney",
+      name: "👩",
       score: 0,
       lastPlayed: ""
     },
@@ -109,20 +109,20 @@ while (game.players[0].score < 3 || game.players[1].score < 3) {
     player1.lastPlayed = getRandom();
     player2.lastPlayed = getRandom();
 
-    console.log(player1.name + " has played " + player1.lastPlayed);
-    console.log(player2.name + " has played " + player2.lastPlayed);
+    console.log(player1.name + "  💪  " + player1.lastPlayed);
+    console.log(player2.name + "  💪  " + player2.lastPlayed);
     let winner = determineWinner(player1, player2)
 
     if (winner === player1) {
       player1.score = player1.score + 1;
-      console.log(player1.name + " has won this round! 🚀");
+      console.log(player1.name + "  has won this round! 🚀");
     } else {
       player2.score = game.players[1].score + 1;
-      console.log(player2.name + " has won this round! 🚀");
+      console.log(player2.name + "  has won this round! 🚀");
     }
     }
 
-        console.log(player1.name + " has " + player1.score + " wins and " + player2.name + " has " + player2.score + " wins");
+        console.log(player1.name + "  has " + player1.score + " wins and " + player2.name + "  has " + player2.score + " wins");
 }
 
 
