@@ -36,6 +36,8 @@ const game = {
   ],
 
 }
+const player1 = game.players[0];
+const player2 = game.players[1];
 
 function getRandom() {
   var weaponOfChoice = weapons[parseInt(Math.random() * weapons.length) % 3];
@@ -96,36 +98,37 @@ var x = 0;
 
 
 while (game.players[0].score < 3 || game.players[1].score < 3) {
-  if (game.players[0].score === 3) {
-    console.log(game.players[0].name + " has won!");
+
+  if (player1.score === 3) {
+    console.log(player1.name + " has won! 🏁");
     break
-  } else if (game.players[1].score === 3) {
-    console.log(game.players[1].name + " has won!");
+  } else if (player2.score === 3) {
+    console.log(player2.name + " has won! 🏁");
     break
   } else {
-    game.players[0].lastPlayed = getRandom();
-    game.players[1].lastPlayed = getRandom();
+    player1.lastPlayed = getRandom();
+    player2.lastPlayed = getRandom();
 
-    console.log(game.players[0].name + " has played " + game.players[0].lastPlayed);
-    console.log(game.players[1].name + " has played " + game.players[1].lastPlayed);
-    let winner = determineWinner(game.players[0], game.players[1])
+    console.log(player1.name + " has played " + player1.lastPlayed);
+    console.log(player2.name + " has played " + player2.lastPlayed);
+    let winner = determineWinner(player1, player2)
 
-    if (winner === game.players[0]) {
-      game.players[0].score = game.players[0].score + 1;
-      console.log(game.players[0].name + " has won this round!");
+    if (winner === player1) {
+      player1.score = player1.score + 1;
+      console.log(player1.name + " has won this round! 🚀");
     } else {
-      game.players[1].score = game.players[1].score + 1;
-      console.log(game.players[1].name + " has won this round!");
+      player2.score = game.players[1].score + 1;
+      console.log(player2.name + " has won this round! 🚀");
     }
     }
 
-        console.log(game.players[0].name + " has " + game.players[0].score + " wins and " + game.players[1].name + " has " + game.players[1].score + " wins");
+        console.log(player1.name + " has " + player1.score + " wins and " + player2.name + " has " + player2.score + " wins");
 }
 
 
 function determineWinner(player1, player2) {
   if (player1.lastPlayed === player2.lastPlayed) {
-    console.log("It was a tie, nobody wins!");
+    console.log("👎  It was a tie, nobody wins!");
   } else if (
     player1.lastPlayed === 'rock' && player2.lastPlayed === 'scissors' ||
     player1.lastPlayed === 'scissors' && player2.lastPlayed === 'paper' ||
