@@ -1,0 +1,10 @@
+const myHobbies = ['cycling', 'jogging', 'walking the dog', 'listening to music', 'watching movies'];
+console.log(myHobbies[0]);
+console.log(myHobbies[2]);
+console.log(myHobbies[4]);
+console.log(myHobbies.length);
+myHobbies.push('eating pizza');
+console.log(myHobbies);
+console.log(myHobbies.length);
+myHobbies.pop();
+console.log(myHobbies);
