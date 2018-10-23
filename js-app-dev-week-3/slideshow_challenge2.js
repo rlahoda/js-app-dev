@@ -26,8 +26,7 @@ const slideshow = {
   },
   playInterval: null,
   play: function() {
-    let now = this;
-    now.playInterval = setInterval(function() {now.nextPhoto()}, 2000);
+    this.playInterval = setInterval(function() {this.nextPhoto()}.bind(this), 2000);// the bind needs to be on the function that is being invoked, so not the () for setInterval, the {} of the function nextPhoto inside the setInterval
   },
   pause: function() {
     clearInterval(this.playInterval);

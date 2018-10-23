@@ -1,0 +1,17 @@
+Update User Profile
+
+1. Create a userProfile object with the following properties
+- name
+- address
+- city
+- state
+- zipcode
+- avatar
+2. Create a function performUpdate that takes in an object, a key, & new value. This fuction will create a new object with the key & value parameters & use the mixin pattern with Object.assign to return a new object that extends the object that was passed in.
+3. Create another function called updateProfile that will take in the userProfile object that you've already defined.
+  - Ask for the user to input a property that they want to update
+  - Ask the user for the new value they want to set that property to
+  - Update the profile using the performUpdate function
+  - Log the old value of the property that was changed
+  - Log the new value of the property that was changed
+  - Log out the new profile object
