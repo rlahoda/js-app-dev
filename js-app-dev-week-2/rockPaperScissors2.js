@@ -41,7 +41,8 @@ function playGame(play1, play2, playUntil) {
   while (play1.wins < playUntil && play2.wins < playUntil) {
     play1.hand = getHand();
     play2.hand = getHand();
-    let winner = playRound(play1, player2);
+    let winner = playRound(play1, play2);
+    console.log(winner);
     if (winner === player1) {
       play1.wins = play1.wins + 1;
       console.log(play1.name + "  has won this round! 🚀  They have " + play1.wins + ' wins');
