@@ -9,7 +9,7 @@ console.log('shopping cart: ' + shoppingCart);
 shoppingCart.push(shoppingList.pop());
 console.log('shopping list: ' + shoppingList);
 console.log('shopping cart: ' + shoppingCart);
-shoppingCart.push(shoppingList.pop());
+shoppingCart.shift(shoppingList.pop());
 console.log('shopping list: ' + shoppingList);
 console.log('shopping cart: ' + shoppingCart);
 

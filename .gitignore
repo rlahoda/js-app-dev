@@ -12,6 +12,3 @@ node_modules
 
 # Sass Cache Files
 .sass-cache
-
-# The development environment repo I downloaded
-development-environment
