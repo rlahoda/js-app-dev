@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="uikit/css/uikit.min.css" />
+        <script src="uikit/js/uikit.min.js"></script>
+        <script src="uikit/js/uikit-icons.min.js"></script>
+  </head>
+  <body>
+
+
+
+<div class="uk-navbar-container" uk-navbar>
+<ul class="uk-navbar-nav">    <!-- Get all posts -->
+<li><button  class="uk-button uk-button-primary" id="getAllPosts" type="button" name="button">Get all posts</button></li>
+    <!-- Get post with id of 10 -->
+<li><button  class="uk-button uk-button-primary" id="getPost10" type="button" name="button">Get post 10</button></li>
+    <!-- Get the comments from post with id of 12 -->
+<li><button  class="uk-button uk-button-primary" id="getCommentsPost12" type="button" name="button">Get comments from post 12</button></li>
+    <!-- note: comments are part of a different data model, you'll need to structure your endpoint to ask for all of the comments that belong to post #12 -->
+    <!-- Get all the posts from user with id of 2 -->
+<li><button  class="uk-button uk-button-primary" id="getPostsByUser2"type="button" name="button">Get posts by user 2</button></li>
+    <!-- Create a new post and log the id generated for it by the server -->
+<li><button  class="uk-button uk-button-primary" id="makeNewPost" type="button" name="button">Make new post and show ID</button></li>
+    <!-- Replace the post with id of 12 and render the responseJSON -->
+<li><button  class="uk-button uk-button-primary" id="replacePost12" type="button" name="button">Replace post 12 and show response</button></li>
+    <!-- Update the title of post with id of 12 and render responseJSON -->
+<li><button  class="uk-button uk-button-primary" id="updateTitlePost12" type="button" name="button">Update the title of post 12</button></li>
+    <!-- Delete the post with id of 12 and render a success message -->
+<li><button  class="uk-button uk-button-primary" id="deletePost12" type="button" name="button">Delete post 12</button></li>
+    <!-- Display a list of posts.  -->
+<li><button  class="uk-button uk-button-primary" id="displayPosts" type="button" name="button">Display posts</button></li></ul>
+</div>
+    <div class="responseContainer" uk-grid>
+
+    </div>
+    <script async src="rest.js" charset="utf-8"></script>
+  </body>
+</html>
